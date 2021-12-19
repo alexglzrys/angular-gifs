@@ -1,0 +1,12 @@
+<div class="row">
+    <!-- Agregar clases adicionales de Animate.css para lograr efectos de entrada en la información -->
+    <div *ngFor="let gif of results" 
+         class="col-sm-6 col-md-4 animate__animated animate__fadeIn">
+        <div class="card">
+            <img [src]="gif.images.downsized_medium.url" [alt]="gif.title">
+            <div class="card-body">
+                <p class="card-text">{{ gif.title }}</p>
+            </div>
+        </div>
+    </div>
+</div>

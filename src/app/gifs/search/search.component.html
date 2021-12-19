@@ -1,0 +1,17 @@
+<h5>Buscar:</h5>
+<!-- Crear referencia local a objetos HTML
+
+Podemos omitir el uso de formularios clásicos (ngModel) y reactivos cuando tenemos un solo input
+colocando una referencia hacia el elemento, pasar su valor como argumento y capturarlo desde el controlador
+
+Para modificar el contenido del elemento desde el controlador, se hace uso del viewChild especificando
+la referencia hacia el elemento nativo HTML.
+En este sentido, no hay necesidad de pasar el valor como argumento de la funcion (referencia.value), ya que el decorador @ViewChild
+sirve como enlace de dos vías.
+
+Los eventos tienen modificadores, en este caso respondo solo a la tecla enter -->
+<input type="text" 
+       class="form-control" 
+       placeholder="Buscar gifs..."
+       (keyup.enter)="buscar()"
+       #refCajaBuscador>
